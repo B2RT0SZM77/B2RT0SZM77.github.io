@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,200&display=swap');
+h1 {
+    color: #0390fc;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+}
+
+h2 {
+    color: white;
+    font-family: 'Sono', sans-serif;
+    text-align: center;
+}
+h3 {
+    color: #0390fc;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+}
+
+body {
+    background-color: black;    
+}
