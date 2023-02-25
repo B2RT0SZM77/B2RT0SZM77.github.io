@@ -1,135 +1,63 @@
-<html lang="en/in">
+<!--=============== FONT AWESOME ===============-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 
-<head>
-	<title>💎 bartoszm77.is-a.dev</title>
-	<meta charset="UTF-8" />
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+<nav id="navbar" class="navbar"><a href="#"></a></nav>
 
-body {
-	background-color: #262626;
-	font-family: 'Inconsolata', monospace;
-}
-.header img {
-  float: left;
-  width: 100px;
-  height: 100px;
-  background: #555;
-}
+<div class="container">
+  <!--=============== NAVIGATION MENU ===============-->
 
-.header h1 {
-  position: relative;
-  top: 18px;
-  left: 10px;
-}
+  <div class="menu">
+    <a href="#welcome-section" class="menu-icon fa-solid fa-house"></a>
+    <a href="#about" class="menu-icon fa-solid fa-user"></a>
 
-main {
-	text-align: center;
-	justify-content: center;
-	position: absolute;
-	top: 50%;
-	width: 33vw;
-	left: 33%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
+  <!--=============== MAIN "WINDOW" ===============-->
 
-@media screen and (max-width: 768px) {
-	main {
-		width: 100vw;
-		left: 0px;
-	}
-}
+  <div class="portfolio">
+    <!--=============== HEADER SECTION ===============-->
 
-main > div {
-	padding: 30px;
-	text-align: center;
-	background-color: #262626;
-	border-radius: 7px;
-}
+    <section class="header">
+      <img class="header-img" src="img/logo.png" alt="" />
+      <h1>farto</h1>
+      <h2>some guy</h2>
+      <div class="socials">
+        <a href="#" target="github.com/B2RT0SZM77" class="fa-brands fa-github"></a>
+      </div>
+    </section>
 
-main img {
-	height: 190px;
-	width: 190px;
-	border-radius: 50%;
-}
+    <!--=============== CONTENT SECTION ===============-->
 
-main h1 {
-	color: white;
-	font-size: 35px;
-	line-height: 40px;
-	margin-bottom: 0px;
-}
+    <div class="content">
+      <!--=============== HOME ===============-->
 
-main h1 > span {
-	font-size: 18px;
-	font-weight: 200;
-	line-height: 20px;
-}
+      <section class="content-card home" id="welcome-section">
+        <h1>Hello, I am farto</h1>
+      </section>
 
-main a {
-	font-size: 22px;
-	text-decoration: none;
-	padding-right: 5px;
-	transition: all ease 0.25s;
-}
+      <!--=============== ABOUT ME ===============-->
 
-/* Icon colours can be changed from here */
+      <section class="content-card about" id="about">
+        <h1>About me</h1>
+        <div class="about-item about-me">
+          <p>
+            Hello so i am farto...........
+          </p>
+        </div>
+        <div class="col-2">
+          <div class="about-item skills">
+            <h1>Skills</h1>
+            <span class="skill">JavaScript</span>
+          </div>
 
-main .a1 {
-	color: #0000ff;
-}
-
-main .a2 {
-	color: #ff0000;
-}
-
-main .a3 {
-	color: #000000;
-}
-
-main .a4 {
-	color: #000000;
-}
-
-main .a5 {
-	color: #1db954;
-}
-
-main .a6 {
-	color: #7289d9;
-}
-
-main .a7 {
-	color: #fc4f08;
-	padding-right: 0px !important;
-}
-
-main a:hover {
-	opacity: 25%;
-	font-size: 22.5px;
-}
-
-	</style>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
-	<main>
-		
-  <h1>bartoszm77.is-a.dev</h1>
-		<div>
-			<br />
-			<a class="a3" title="GitHub" href="https://github.com/B2RT0SZM77">
-				<i class="fab fa-github"></i>
-			</a>
-			<a class="a6" title="Discord" href="https://discord.com/users/408669866636083212">
-				<i class="fa-brands fa-discord"></i>
-			</a>
+          <div class="about-item languages">
+            <h1>Languages</h1>
+            <div class="language">
+              <p>polish</p>
+              <span class="bar"><span class="polish"></span></span>
+            </div>
+            <div class="language">
+              <p>english</p>
+              <span class="bar"><span class="english"></span></span>
+            </div>
 		</div>
-	</main>
-</body>
-
-</html>
+        </div>
+      </section>
