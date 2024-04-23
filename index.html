@@ -44,7 +44,7 @@ body{
     font-family: 'Bebas Neue', cursive;
     font-family: 'Comfortaa', cursive;
     color: white;
-    font-size:10px
+    font-size:5px
   }
   a:hover {
   color: yellow;
@@ -61,14 +61,14 @@ fetch('https://api.ipify.org?format=json')
   .then(data => {
     const ipAddress = data.ip;
     // Display the IP address in the <h1> element
-    document.getElementById('ip-address').textContent = ipAddress;
+    document.getElementById('ip-address').textContent = `Your ip address is: ${ipAddress}\nRemember that we for now don't collect your ip address.`;
   })
   .catch(error => {
     console.error('Error fetching IP address:', error);
     document.getElementById('ip-address').textContent = 'Error fetching IP';
   });
 setInterval(()=>{
-  console.log('what are you looking for aha')
+  console.log('what\'s the point of looking into console now? | '+Math.random()*9999)
 },15);
 /*_img = document.createElement("img");
 _img.style.position = 'absolute';
@@ -116,5 +116,5 @@ _img.src = "https://imgur.com/koTDZBO.png";*/</script>
   👨‍💻 GITHUB:<br><a style="color: yellow"; href="https://github.com/B2RT0SZM77">@B2RT0SZM77</a><br>
   💚 MATRIX:<br><a style="color: yellow"; href="https://matrix.to/#/@fvrto:matrix.org">@fvrto</a>
 </h2>
-<h2 id="ip-address">Loading...</h1>
+<h3 id="ip-address">Loading...</h3>
 </body>
