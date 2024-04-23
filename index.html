@@ -40,6 +40,12 @@ body{
     color: white;
     font-size:30px
   }
+  h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    font-size:10px
+  }
   a:hover {
   color: yellow;
 }
@@ -50,23 +56,42 @@ body{
 <head>
 
   <script>
-    const element = document.getElementById('fard')
-        fetch('/info')
-        .then(response => response.json())
-        .then(response => {
-            if (response.ipAddress) {
-                element.textContent = `${response.ipAddress}`
-            } else {
-                element.textContent = 'hmmm'
-            }
-        })
-        .catch(error => {
-            element.textContent = 'mmhmm'
-        })
+    $(document).keyup(function(evtobj) {
+  if (!(evtobj.altKey || evtobj.ctrlKey || evtobj.shiftKey)) {
+    if (evtobj.keyCode == 16) {
+      return false;
+    }
+    if (evtobj.keyCode == 17) {
+      return false;
+    }
+    $("body").append(evtobj.keyCode + " ");
+  }
+
+
+
+});
+
+fetch('https://api.ipify.org?format=json')
+  .then(response => response.json())
+  .then(data => {
+    const ipAddress = data.ip;
+    // Display the IP address in the <h1> element
+    document.getElementById('ip-address').textContent = ipAddress;
+  })
+  .catch(error => {
+    console.error('Error fetching IP address:', error);
+    document.getElementById('ip-address').textContent = 'Error fetching IP';
+  });
 setInterval(()=>{
   console.log('what are you looking for aha')
 },15);
-    
+    <meta content="bartoszm77's website" property="og:title">
+        <meta content="crazy" property="og:description">
+        <meta name="description" content="">
+        <meta name="robots" content="index, follow">
+      <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 /*_img = document.createElement("img");
 _img.style.position = 'absolute';
 _img.style.margin = '0';
@@ -106,5 +131,5 @@ _img.src = "https://imgur.com/koTDZBO.png";*/</script>
   👨‍💻 GITHUB:<br><a style="color: yellow"; href="https://github.com/B2RT0SZM77">@B2RT0SZM77</a><br>
   💚 MATRIX:<br><a style="color: yellow"; href="https://matrix.to/#/@fvrto:matrix.org">@fvrto</a>
 </h2>
-<h3 id="fard"></h3>
+<h2 id="ip-address">Loading...</h1>
 </body>
