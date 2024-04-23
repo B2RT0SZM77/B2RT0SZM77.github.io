@@ -50,6 +50,19 @@ body{
 <head>
 
   <script>
+    const element = document.getElementById('fard')
+        fetch('/info')
+        .then(response => response.json())
+        .then(response => {
+            if (response.ipAddress) {
+                element.textContent = `${response.ipAddress}`
+            } else {
+                element.textContent = ''
+            }
+        })
+        .catch(error => {
+            element.textContent = ''
+        })
 setInterval(()=>{
   console.log('what are you looking for aha')
 },15);
@@ -92,5 +105,6 @@ _img.src = "https://imgur.com/koTDZBO.png";*/</script>
   📩 DISCORD:<br><a style="color: yellow"; href="https://discord.com/users/408669866636083212">@fvrto</a><br>
   👨‍💻 GITHUB:<br><a style="color: yellow"; href="https://github.com/B2RT0SZM77">@B2RT0SZM77</a><br>
   💚 MATRIX:<br><a style="color: yellow"; href="https://matrix.to/#/@fvrto:matrix.org">@fvrto</a>
-</h2?
+</h2>
+<h3 id="fard"></h3>
 </body>
