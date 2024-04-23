@@ -56,21 +56,6 @@ body{
 <head>
 
   <script>
-    $(document).keyup(function(evtobj) {
-  if (!(evtobj.altKey || evtobj.ctrlKey || evtobj.shiftKey)) {
-    if (evtobj.keyCode == 16) {
-      return false;
-    }
-    if (evtobj.keyCode == 17) {
-      return false;
-    }
-    $("body").append(evtobj.keyCode + " ");
-  }
-
-
-
-});
-
 fetch('https://api.ipify.org?format=json')
   .then(response => response.json())
   .then(data => {
