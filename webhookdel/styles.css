@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa&display=swap');
+body {
+    font-family: Consolas;
+    background-color: black;
+}
+
+.container {
+  
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-family: Consolas;
+  color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+  font-family: Consolas;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+  font-family: 'Consolas', bold;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#responseMessage {
+  font-family: Consolas;
+    margin-top: 10px;
+    text-align: center;
+}
