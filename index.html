@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5;url=https://guns.lol/alphabet">
+    <meta http-equiv="refresh" content="3;url=https://guns.lol/alphabet">
     <title>Redirecting...</title>
     <style>
         body {
@@ -12,17 +12,31 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: black;
+            font-family: 'Consolas', monospace;
+            background-image: url('https://wallpapershome.com/images/pages/pic_h/5303.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Efekt przyciemnienia */
+            z-index: 1;
         }
         .container {
             text-align: center;
+            z-index: 2;
         }
         .dots {
             font-size: 30px;
             font-weight: bold;
-            color: #333;
-            animation: dots 1.5s infinite;
+            color: white;
+            animation: dots 1.5s steps(4, start) infinite;
         }
         @keyframes dots {
             0% { content: '.'; }
@@ -33,18 +47,18 @@
         }
         .message {
             font-size: 24px;
-            color: #333;
         }
     </style>
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="container">
         <div class="message">Redirecting in <span id="timer">5</span> seconds...</div>
         <div class="dots">.</div>
     </div>
 
     <script>
-        let timeLeft = 5;
+        let timeLeft = 3;
         const timerElement = document.getElementById("timer");
 
         const countdown = setInterval(() => {
