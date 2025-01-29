@@ -4,70 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="3;url=https://guns.lol/alphabet">
-    <title>Redirecting...</title>
+    <title>bartoszm77</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Consolas', monospace;
-            background-image: url('https://wallpapershome.com/images/pages/pic_h/5303.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            color: white;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.9); /* Efekt przyciemnienia */
-            z-index: 1;
-        }
-        .container {
-            text-align: center;
-            z-index: 2;
-        }
-        .dots {
-            font-size: 30px;
-            font-weight: bold;
-            color: white;
-            animation: dots 1.5s steps(4, start) infinite;
-        }
-        @keyframes dots {
-            0% { content: '.'; }
-            25% { content: '..'; }
-            50% { content: '...'; }
-            75% { content: '..'; }
-            100% { content: '.'; }
-        }
-        .message {
-            font-size: 24px;
-        }
+
     </style>
 </head>
 <body>
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="message">Redirecting in <span id="timer">3</span> seconds...</div>
-    </div>
-
+hello.
     <script>
-        let timeLeft = 3;
-        const timerElement = document.getElementById("timer");
 
-        const countdown = setInterval(() => {
-            timeLeft--;
-            timerElement.textContent = timeLeft;
-
-            if (timeLeft <= 0) {
-                clearInterval(countdown);
-            }
-        }, 1000);
     </script>
 </body>
 </html>
