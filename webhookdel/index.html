@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Discord webhook deleter</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webhook Nuker | bartoszm77</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-    <h1>Delete Discord Webhook</h1>
-    <input type="text" id="webhookUrlInput" placeholder="Enter Webhook URL">
-    <button id="deleteButton">Delete</button>
-    <p id="responseMessage"></p>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="script.js"></script>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <div class="icon-header">
+            <i class="fa-solid fa-bomb"></i>
+        </div>
+        <h1>Webhook<span>Nuker</span></h1>
+        <p class="subtitle">Enter webhook url</p>
+        
+        <div class="input-group">
+            <input type="text" id="webhookUrlInput" placeholder="https://discord.com/api/webhooks/...">
+            <div class="input-glow"></div>
+        </div>
+
+        <button id="deleteButton">
+            <span class="btn-text">DeleteK</span>
+            <i class="fa-solid fa-fire-glow"></i>
+        </button>
+        
+        <p id="responseMessage"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
