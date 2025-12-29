@@ -1,33 +1,128 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bartoszm77</title>
+    <title>bartoszm77.is-a.dev</title>
     <style>
-        pre, code { font-family: Hack, monospace; }
-        .h1 {
-            font-family: Hack, monospace; 
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: #020202;
+            color: #ffffff;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow: hidden;
+        }
+
+        #canvas-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             text-align: center;
         }
-        body {
-            color: #ffffff;
-            background-color: #171715;
-            font-family: Hack, monospace; 
+
+        .profile-container {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.01);
+            padding: 60px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        a {
-            color: #797bab;
+
+        .profile-container:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.03);
+            transform: scale(1.02);
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            letter-spacing: -3px;
+            background: linear-gradient(180deg, #fff 0%, #444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.tagline {
+            color: #555;
+            font-size: 0.8rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        .links {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .link-item {
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
+            font-size: 0.85rem;
+            padding: 12px 25px;
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            transition: 0.3s;
+            background: rgba(255,255,255,0.02);
+        }
+
+        .link-item:hover {
+            color: #fff;
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.3);
+            box-shadow: 0 0 30px rgba(255,255,255,0.05);
+        }
+
+        .footer-branding {
+            position: absolute;
+            bottom: 30px;
+            font-size: 0.6rem;
+            color: #333;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
-   <pre>
-    welcome
-       
-matrix: <a href="https://matrix.to/#/@fvrto:matrix.org" target="_blank">@fvrto:matrix.org</a>
-discord: <a href="https://discord.com/users/fvrto" target="_blank">@fvrto</a>
-   </pre>
-</body>
+
+    <canvas id="canvas-particles"></canvas>
+
+    <div class="content">
+        <div class="profile-container">
+            <h1>bartoszm77</h1>
+            
+            <div class="links">
+    <a href="https://discord.com/users/408669866636083212" class="link-item" style="display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="message-square" style="width: 16px; height: 16px;"></i> Discord
+    </a>
+</div>
+        </div>
+    </div>
+<script>
+  lucide.createIcons();
+</script>
+    </body>
 </html>
